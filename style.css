@@ -392,7 +392,7 @@ button {
   gap: 3rem;
 }
 .saved_cards {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 3rem;
 }

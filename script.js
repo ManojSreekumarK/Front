@@ -5,9 +5,12 @@ const toolcards = document.querySelector(".tool_cards");
 const filters = document.querySelector(".filters");
 const productcard = document.querySelector("#productcard");
 const totalTools = document.querySelector("#total");
+const totalToolscontainer = document.querySelector(".total_tools");
 const filterbtn = document.querySelectorAll(".filterbtn");
 const savedcards = document.querySelector(".saved_cards");
 const searchkey = document.querySelector(".searchbar_input");
+const saved = document.querySelector(".saved");
+const savedicon = saved.querySelector("img");
 //
 //
 //
@@ -48,6 +51,25 @@ document.addEventListener("DOMContentLoaded", () => {
   loadSegments();
   addStyleToBookmark();
 });
+saved.addEventListener("click", () => {
+  if (toolcards.style.display == "flex") {
+    localStorage.setItem("toolcardDisplay", "none");
+    localStorage.setItem("savedcardDisplay", "flex");
+    window.location.reload();
+  } else {
+    localStorage.setItem("toolcardDisplay", "flex");
+    localStorage.setItem("savedcardDisplay", "none");
+    window.location.reload();
+  }
+});
+
+if (localStorage.getItem("savedcardDisplay") == "none") {
+  savedicon.src =
+    "https://gist.githack.com/ManojSreekumarK/c910dfc0bde5ceb9f29960ae524a9aa7/raw/e6898b177645160c1d46e14826400dc05ca2a365/bookmark2.svg";
+} else {
+  savedicon.src =
+    "https://gist.githack.com/ManojSreekumarK/9517e02e360a00c43b9a0823eb611ee8/raw/3b19a947877d131ae21178cdb22992f7a47901f6/uturn.svg";
+}
 // //////////////////////////responsive menu////////////////////////////////////////
 burger.addEventListener("click", function () {
   navmenu.style.left = "0";
@@ -89,6 +111,7 @@ function productpage(id) {
   localStorage.setItem("toolcardDisplay", "none");
   localStorage.setItem("filtersDisplay", "none");
   localStorage.setItem("productcardDisplay", "flex");
+  localStorage.setItem("totalDisplay", "none");
   localStorage.setItem("pkey", id);
   window.open(window.location.href + "#productcard", "_blank");
 }
@@ -101,9 +124,18 @@ if (filters) {
 if (productcard) {
   productcard.style.display = localStorage.getItem("productcardDisplay");
 }
+if (savedcards) {
+  savedcards.style.display = localStorage.getItem("savedcardDisplay");
+}
+if (totalToolscontainer) {
+  totalToolscontainer.style.display = localStorage.getItem("totalDisplay");
+}
+
 localStorage.setItem("toolcardDisplay", "flex");
 localStorage.setItem("filtersDisplay", "flex");
 localStorage.setItem("productcardDisplay", "none");
+localStorage.setItem("savedcardDisplay", "none");
+localStorage.setItem("totalDisplay", "block");
 //
 //
 ////////////////////////// to load content inside product card  on new tab//////////////////////////
@@ -137,26 +169,37 @@ function displayProduct() {
 //
 
 function totaltools() {
-  getProducts().then((data) => {
-    let total = data.length;
-    if (totalTools) {
-      totalTools.innerText = total;
-    }
-  });
+  if (savedcards.style.display == "none") {
+    getProducts().then((data) => {
+      let total = data.length;
+      if (totalTools) {
+        totalTools.innerText = total;
+      }
+    });
+  } else {
+    totalTools.innerText = "Saved";
+  }
+  if (productcard.style.display == "flex") {
+    totalTools.innerText = "Product";
+  }
 }
 
 function toolcount(seg) {
   let total = 0;
-  getProducts().then((data) => {
-    data.forEach((item) => {
-      if (item.segmentId == seg) {
-        total++;
+  if (savedcards.style.display == "none") {
+    getProducts().then((data) => {
+      data.forEach((item) => {
+        if (item.segmentId == seg) {
+          total++;
+        }
+      });
+      if (totalTools) {
+        totalTools.innerText = total;
       }
     });
-    if (totalTools) {
-      totalTools.innerText = total;
-    }
-  });
+  } else {
+    totalTools.innerText = "Saved";
+  }
 }
 //
 //
