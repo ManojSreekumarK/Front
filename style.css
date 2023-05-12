@@ -261,7 +261,7 @@ button {
   border: 1px solid var(--grey);
   border-radius: 0.5rem;
   padding: 0 1rem;
-  margin: 3rem 0;
+
   height: 5rem;
   box-sizing: border-box;
   width: 100%;
@@ -269,6 +269,9 @@ button {
   align-items: center;
   background-color: var(--white);
   transition: box-shadow 0.48s cubic-bezier(0.37, 0.74, 0.15, 1);
+}
+.search-wrapper {
+  margin: 3rem 0;
 }
 .searchbar img {
   width: 2rem;
@@ -288,6 +291,15 @@ button {
 .searchbar input:focus {
   outline: none;
 }
+.validation {
+  opacity: 0;
+  color: var(--grey01);
+  margin-top: 10px;
+  transition: all 0.3s ease-in;
+}
+.searchbar:hover + .validation {
+  opacity: 1;
+}
 .total_tools {
   font-size: 2rem;
   line-height: 2.75rem;
@@ -295,6 +307,7 @@ button {
   color: var(--black01);
   /* margin-bottom: 24px; */
 }
+
 /* filters */
 .filters {
   display: flex;
@@ -346,11 +359,11 @@ button {
   cursor: pointer;
   flex: 0 0 auto;
 }
-.filters button:hover {
+/* .filters button:hover {
   color: var(--black) !important;
   font-weight: 500 !important;
   border-bottom: 2px solid var(--black);
-}
+} */
 .space {
   flex-grow: 1;
 }
@@ -374,6 +387,11 @@ button {
   flex-shrink: 0;
 }
 .tool_cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.saved_cards {
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -418,15 +436,21 @@ button {
   position: relative;
   width: 1rem;
   height: 1rem;
+  z-index: 9;
+  cursor: pointer;
 }
 .bookmark:hover {
   fill: var(--blue);
   stroke: transparent;
 }
 .bookmark_active {
+  position: relative;
+  width: 1rem;
+  height: 1rem;
   fill: var(--blue);
   stroke: transparent;
 }
+
 .aside_header {
   font-size: 1rem;
   line-height: 1.75rem;
@@ -471,7 +495,21 @@ hr {
   line-height: 0.875rem;
   font-weight: 700;
 }
+/* product card */
+#productcard {
+  background-color: #fff;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+  margin: 0 auto;
+  width: 40%;
+  border-radius: 10px;
+}
 
+#productcard a {
+  text-decoration: underline;
+  color: var(--blue);
+}
 /* responsive design */
 @media only screen and (min-width: 1024px) {
   body {
@@ -541,7 +579,14 @@ hr {
 }
 @media only screen and (max-width: 320px) {
   .tool_card {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .tool_icon_container {
+    width: 6.7rem;
+    height: 6.7rem;
+  }
+  .tool_card_content {
+    width: 85%;
   }
 }
