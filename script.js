@@ -51,7 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
   loadSegments();
   addStyleToBookmark();
 });
-saved.addEventListener("click", () => {
+saved.addEventListener("click", (e) => {
+  e.preventDefault();
   if (toolcards.style.display == "flex") {
     localStorage.setItem("toolcardDisplay", "none");
     localStorage.setItem("savedcardDisplay", "flex");
@@ -349,7 +350,7 @@ function loadproducts(segmentid) {
         if (toolcards) {
           toolcards.innerHTML += `<div id="${item.productId}" class="tool_card" >
         <div class="tool_card_content" onclick="productpage('${item.productId}')">
-  
+
           <h2>${item.productName}</h2>
           <p>
           ${item.description}
@@ -419,12 +420,15 @@ for (let i = 0; i < filterbtn.length; i++) {
 function savedsegload() {
   filterbtn[0].classList.add("filter_active");
   let savedTools = JSON.parse(localStorage.getItem("savedTools")) || [];
-  for (y = 0; y < savedTools.length; y++) {
-    for (x = 0; x < Segments.length; x++) {
-      var Segment = Segments[x];
-      if (savedTools[y] === Segment.id) {
-        if (savedcards) {
-          savedcards.innerHTML += `<div id="${Segment.id}" class="tool_card">
+  if (savedTools.length == 0) {
+    savedcards.innerHTML += `<h1>No saved segments</h1>`;
+  } else {
+    for (y = 0; y < savedTools.length; y++) {
+      for (x = 0; x < Segments.length; x++) {
+        var Segment = Segments[x];
+        if (savedTools[y] === Segment.id) {
+          if (savedcards) {
+            savedcards.innerHTML += `<div id="${Segment.id}" class="tool_card">
       <div class="tool_icon_container">
         <img
           src="./assets/icons/${Segment.icon}"
@@ -444,8 +448,9 @@ function savedsegload() {
           esse quidem debitis.
         </p>
       </div>
-     
+
     </div>`;
+          }
         }
       }
     }
@@ -454,6 +459,7 @@ function savedsegload() {
 savedsegload();
 function savedproload(segmentid) {
   let savedProducts = JSON.parse(localStorage.getItem("savedProducts")) || [];
+
   getProducts().then((data) => {
     const filteredProducts = data.filter((item) => {
       return savedProducts.some(
@@ -463,17 +469,20 @@ function savedproload(segmentid) {
           savedItem.productid == item.productId
       );
     });
-
-    filteredProducts.forEach((item) => {
-      if (savedcards) {
-        savedcards.innerHTML += `<div id="${item.productId}" class="tool_card">
+    if (filteredProducts.length == 0) {
+      savedcards.innerHTML += `<h1>No saved products</h1>`;
+    } else {
+      filteredProducts.forEach((item) => {
+        if (savedcards) {
+          savedcards.innerHTML += `<div id="${item.productId}" class="tool_card">
               <div class="tool_card_content">
                 <h2>${item.productName}</h2>
                 <p>${item.description}</p>
               </div>
             </div>`;
-      }
-    });
+        }
+      });
+    }
   });
 }
 
@@ -619,7 +628,7 @@ if (savedcards) {
                 esse quidem debitis.
               </p>
             </div>
-            
+
           </div>`;
                 }
               }

@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  font-family: $font-family_1;
+}
+body {
+  background: #f7f7f7;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+button {
+  background: none;
+  font: inherit;
+  border: none;
+  cursor: pointer;
+}
+hr {
+  border: none;
+  width: 18%;
+  border-top: 2px solid $black;
+  height: 0;
+}

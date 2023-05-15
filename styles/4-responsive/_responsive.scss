@@ -1,0 +1,79 @@
+@media only screen and (min-width: 1024px) {
+  body {
+    overflow: auto !important;
+  }
+}
+@media only screen and (min-width: 1921px) {
+  :root {
+    $layout-col-3: 57rem;
+    $layout-col-1: 22.5833rem;
+    $layout-col-5: 96.3333rem;
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 1290px) {
+  :root {
+    font-size: 14px;
+  }
+  .searchbar {
+    height: 3.5rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  :root {
+    $layout-col-5: calc(83.33333vw - 1.8333rem);
+  }
+  .aside {
+    display: none;
+  }
+  .saved_wraper {
+    display: block;
+  }
+  .main {
+    width: 100%;
+  }
+  .Ibar_menu {
+    display: none;
+  }
+  .Ibar_right {
+    span {
+      display: none;
+    }
+    img {
+      width: 1.3rem;
+      height: 1.3rem;
+    }
+  }
+  .ham {
+    display: flex;
+  }
+  .acc-hidden {
+    display: block;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #main-content {
+    width: $layout-col-4;
+  }
+}
+@media only screen and (max-width: 563px) {
+  #main-content {
+    width: $layout-col-2;
+  }
+  .acc-hidden {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .tool_card {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .tool_icon_container {
+    width: 6.7rem;
+    height: 6.7rem;
+  }
+  .tool_card_content {
+    width: 85%;
+  }
+}

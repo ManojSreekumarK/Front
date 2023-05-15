@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "Museo Sans";
+  src: url("./assets/fonts/Museo-sans/museosans-300-webfont.woff2") format("woff2"), url("./assets/fonts/Museo-sans/museosans-300-webfont.woff") format("woff");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Museo Sans";
+  src: url("./assets/fonts/Museo-sans/museosans_500-webfont.woff2") format("woff2"), url("./assets/fonts/Museo-sans/museosans_500-webfont.woff") format("woff");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Museo Sans";
+  src: url("./assets/fonts/Museo-sans/museosans_700-webfont.woff2") format("woff2"), url("./assets/fonts/Museo-sans/museosans_700-webfont.woff") format("woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Museo Sans";
+  src: url("./assets/fonts/Museo-sans/museosans_900-webfont.woff2") format("woff2"), url("./assets/fonts/Museo-sans/museosans_900-webfont.woff") format("woff");
+  font-weight: 900;
+}
+/* Font face for Helvetica */
+@font-face {
+  font-family: "Helvetica";
+  src: url("./assets/fonts/Helvetica/helvetica-webfont.woff2") format("woff2"), url("./assets/fonts/Helvetica/helvetica-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@media only screen and (min-width: 1024px) {
+  body {
+    overflow: auto !important;
+  }
+}
+@media only screen and (min-width: 1921px) {
+  :root {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 1290px) {
+  :root {
+    font-size: 14px;
+  }
+  .searchbar {
+    height: 3.5rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .aside {
+    display: none;
+  }
+  .saved_wraper {
+    display: block;
+  }
+  .main {
+    width: 100%;
+  }
+  .Ibar_menu {
+    display: none;
+  }
+  .Ibar_right span {
+    display: none;
+  }
+  .Ibar_right img {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+  .ham {
+    display: flex;
+  }
+  .acc-hidden {
+    display: block;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #main-content {
+    width: calc(87.5vw - 30px);
+  }
+}
+@media only screen and (max-width: 563px) {
+  #main-content {
+    width: calc(100vw - 32px);
+  }
+  .acc-hidden {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .tool_card {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .tool_icon_container {
+    width: 6.7rem;
+    height: 6.7rem;
+  }
+  .tool_card_content {
+    width: 85%;
+  }
+}/*# sourceMappingURL=responsive-dir.css.map */

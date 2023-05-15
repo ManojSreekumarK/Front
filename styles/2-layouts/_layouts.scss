@@ -1,0 +1,53 @@
+.acc-hidden {
+  display: none;
+  width: 40%;
+  position: fixed;
+  z-index: 9999;
+  background-color: $white;
+  height: 100%;
+  left: -100%;
+  top: 0;
+  transition: left 0.5s ease-in-out;
+}
+.Ibar_main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $white;
+  border: 1px solid $ibar-border-color;
+  z-index: 999;
+}
+#main-content {
+  width: $layout-col-5;
+  max-width: 96.3125rem;
+  padding-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mainwithaside {
+  display: flex;
+  justify-content: space-between;
+}
+.main {
+  width: $layout-col-3;
+  flex-shrink: 0;
+  margin-bottom: 3.125rem;
+}
+.aside {
+  width: $layout-col-1;
+  flex-shrink: 0;
+}
+#productcard {
+  background-color: $white;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+  margin: 0 auto;
+  width: 40%;
+  border-radius: 10px;
+  a {
+    text-decoration: underline;
+    color: $blue;
+  }
+}

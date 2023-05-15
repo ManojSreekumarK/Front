@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "Museo Sans";
+  src: url("./assets/fonts/Museo-sans/museosans-300-webfont.woff2") format("woff2"), url("./assets/fonts/Museo-sans/museosans-300-webfont.woff") format("woff");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Museo Sans";
+  src: url("./assets/fonts/Museo-sans/museosans_500-webfont.woff2") format("woff2"), url("./assets/fonts/Museo-sans/museosans_500-webfont.woff") format("woff");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Museo Sans";
+  src: url("./assets/fonts/Museo-sans/museosans_700-webfont.woff2") format("woff2"), url("./assets/fonts/Museo-sans/museosans_700-webfont.woff") format("woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Museo Sans";
+  src: url("./assets/fonts/Museo-sans/museosans_900-webfont.woff2") format("woff2"), url("./assets/fonts/Museo-sans/museosans_900-webfont.woff") format("woff");
+  font-weight: 900;
+}
+/* Font face for Helvetica */
+@font-face {
+  font-family: "Helvetica";
+  src: url("./assets/fonts/Helvetica/helvetica-webfont.woff2") format("woff2"), url("./assets/fonts/Helvetica/helvetica-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.acc-hidden {
+  display: none;
+  width: 40%;
+  position: fixed;
+  z-index: 9999;
+  background-color: #fff;
+  height: 100%;
+  left: -100%;
+  top: 0;
+  transition: left 0.5s ease-in-out;
+}
+
+.Ibar_main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  z-index: 999;
+}
+
+#main-content {
+  width: calc(83.33333vw - 3.6667rem);
+  max-width: 96.3125rem;
+  padding-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainwithaside {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main {
+  width: calc(50vw - 3rem);
+  flex-shrink: 0;
+  margin-bottom: 3.125rem;
+}
+
+.aside {
+  width: calc(20.83333vw - 2.4167rem);
+  flex-shrink: 0;
+}
+
+#productcard {
+  background-color: #fff;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+  margin: 0 auto;
+  width: 40%;
+  border-radius: 10px;
+}
+#productcard a {
+  text-decoration: underline;
+  color: #0b4ded;
+}/*# sourceMappingURL=layout-dir.css.map */
