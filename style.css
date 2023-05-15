@@ -309,14 +309,22 @@ button {
 }
 
 /* filters */
+.filterwaraper {
+  position: relative;
+}
+
 .filters {
   display: flex;
-  position: relative;
   gap: 1rem;
   align-items: center;
   border-bottom: 1px solid var(--grey);
   margin-bottom: 3rem;
-  overflow-x: hidden;
+  overflow-x: auto;
+}
+.filters::-webkit-scrollbar {
+  width: 0px;
+  height: 0;
+  background: transparent; /* Make scrollbar invisible */
 }
 .saved_wraper {
   display: none;
@@ -366,6 +374,8 @@ button {
 } */
 .space {
   flex-grow: 1;
+  min-width: 50px;
+  min-height: 100%;
 }
 .filter_active {
   color: var(--black) !important;
