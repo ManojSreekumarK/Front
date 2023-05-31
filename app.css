@@ -59,33 +59,6 @@ hr {
   height: 0;
 }
 
-@font-face {
-  font-family: "Museo Sans";
-  src: url("./assets/fonts/Museo-sans/museosans-300-webfont.woff2") format("woff2"), url("./assets/fonts/Museo-sans/museosans-300-webfont.woff") format("woff");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Museo Sans";
-  src: url("./assets/fonts/Museo-sans/museosans_500-webfont.woff2") format("woff2"), url("./assets/fonts/Museo-sans/museosans_500-webfont.woff") format("woff");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Museo Sans";
-  src: url("./assets/fonts/Museo-sans/museosans_700-webfont.woff2") format("woff2"), url("./assets/fonts/Museo-sans/museosans_700-webfont.woff") format("woff");
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Museo Sans";
-  src: url("./assets/fonts/Museo-sans/museosans_900-webfont.woff2") format("woff2"), url("./assets/fonts/Museo-sans/museosans_900-webfont.woff") format("woff");
-  font-weight: 900;
-}
-/* Font face for Helvetica */
-@font-face {
-  font-family: "Helvetica";
-  src: url("./assets/fonts/Helvetica/helvetica-webfont.woff2") format("woff2"), url("./assets/fonts/Helvetica/helvetica-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 .acc-hidden {
   display: none;
   width: 40%;
@@ -146,33 +119,6 @@ hr {
   color: #0b4ded;
 }
 
-@font-face {
-  font-family: "Museo Sans";
-  src: url("./assets/fonts/Museo-sans/museosans-300-webfont.woff2") format("woff2"), url("./assets/fonts/Museo-sans/museosans-300-webfont.woff") format("woff");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Museo Sans";
-  src: url("./assets/fonts/Museo-sans/museosans_500-webfont.woff2") format("woff2"), url("./assets/fonts/Museo-sans/museosans_500-webfont.woff") format("woff");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Museo Sans";
-  src: url("./assets/fonts/Museo-sans/museosans_700-webfont.woff2") format("woff2"), url("./assets/fonts/Museo-sans/museosans_700-webfont.woff") format("woff");
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Museo Sans";
-  src: url("./assets/fonts/Museo-sans/museosans_900-webfont.woff2") format("woff2"), url("./assets/fonts/Museo-sans/museosans_900-webfont.woff") format("woff");
-  font-weight: 900;
-}
-/* Font face for Helvetica */
-@font-face {
-  font-family: "Helvetica";
-  src: url("./assets/fonts/Helvetica/helvetica-webfont.woff2") format("woff2"), url("./assets/fonts/Helvetica/helvetica-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 .Ibar_hidden_wrapper {
   height: 70%;
   max-height: 400px;
@@ -572,33 +518,6 @@ hr {
   font-weight: 700;
 }
 
-@font-face {
-  font-family: "Museo Sans";
-  src: url("./assets/fonts/Museo-sans/museosans-300-webfont.woff2") format("woff2"), url("./assets/fonts/Museo-sans/museosans-300-webfont.woff") format("woff");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Museo Sans";
-  src: url("./assets/fonts/Museo-sans/museosans_500-webfont.woff2") format("woff2"), url("./assets/fonts/Museo-sans/museosans_500-webfont.woff") format("woff");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Museo Sans";
-  src: url("./assets/fonts/Museo-sans/museosans_700-webfont.woff2") format("woff2"), url("./assets/fonts/Museo-sans/museosans_700-webfont.woff") format("woff");
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Museo Sans";
-  src: url("./assets/fonts/Museo-sans/museosans_900-webfont.woff2") format("woff2"), url("./assets/fonts/Museo-sans/museosans_900-webfont.woff") format("woff");
-  font-weight: 900;
-}
-/* Font face for Helvetica */
-@font-face {
-  font-family: "Helvetica";
-  src: url("./assets/fonts/Helvetica/helvetica-webfont.woff2") format("woff2"), url("./assets/fonts/Helvetica/helvetica-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 @media only screen and (min-width: 1024px) {
   body {
     overflow: auto !important;
